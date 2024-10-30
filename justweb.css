@@ -1,0 +1,191 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(245, 245, 245, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+  color: #4CAF50;
+  transform: scale(1.1);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E8F5E9;
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-title {
+  font-size: 4rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 0.5s;
+}
+
+.explore-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-btn:hover {
+  background-color: #43A047;
+  transform: translateY(-3px);
+}
+
+.about, .services, .projects, .contact {
+  padding: 8rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.about p, .services h2, .projects h2, .contact p {
+  transition: opacity 0.5s ease;
+}
+
+.about p:hover,
+.services h2:hover,
+.projects h2:hover,
+.contact p:hover {
+  opacity: 0.8;
+}
+
+.services .service-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.card {
+  background-color: #EEEEEE;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.project-item {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.contact-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+}
+
+footer {
+  background-color: #E0E0E0;
+  padding: 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  
+  
